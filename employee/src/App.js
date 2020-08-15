@@ -6,7 +6,7 @@ import Player from "./components/Player";
 import avatar from "./atla.json"
 // import Col from "./components/Col/index.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col } from 'react-bootstrap';
+import { ListGroup, Container, Row, Col } from 'react-bootstrap';
 
 
 
@@ -68,20 +68,41 @@ class App extends React.Component {
   <Container>
     {/* <h2>Employee Directory</h2> */}
     <Title>Employee Directory</Title>
+    <ListGroup>
+    <ListGroup.Item>
+    <Row > 
+       <Col >Name</Col>
+       <Col >Image</Col>
+       <Col >Bending</Col>
+       <Col >Age</Col>
+       
+     </Row>
+      </ListGroup.Item>
+    </ListGroup>
 
   {avatar.map((character)=>{
        return(
-       <Row > 
+        <ListGroup>
+       <ListGroup.Item><Row > 
        <Col >{character.name}</Col>
        <Col ><img src = {character.image}></img></Col>
        <Col >{character.bending}</Col>
        <Col >{character.age}</Col>
        
-     </Row>
+     </Row></ListGroup.Item>
+     </ListGroup>
+
        )
       })
       } 
    </Container>
+
+
+// Cras justo odio</ListGroup.Item>
+// <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+// <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+// <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+// <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
   //  </Wrapper>
     // <Wrapper>
     //   <Title>Employee Directory</Title>
