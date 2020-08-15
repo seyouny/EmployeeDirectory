@@ -4,7 +4,11 @@ import Title from "./components/Title";
 import Header from "./components/Header";
 import Player from "./components/Player";
 import avatar from "./atla.json"
-import Col from "./components/Col/index.js";
+// import Col from "./components/Col/index.js";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col } from 'react-bootstrap';
+
+
 
 class App extends React.Component {
   state = {
@@ -60,23 +64,37 @@ class App extends React.Component {
   render()
 {
     return (
-    <Wrapper>
-      <Title>Employee Directory</Title>
-      <Col><Header
-      handleClick= {this.handleClick}>
-
-      </Header>
-      {avatar.map((character)=>{
-       return <Player 
-        name={character.name}
-        image={character.image}
-        bending={character.bending}
-        age = {character.age}
-      />
+  <Container>
+  {avatar.map((character)=>{
+       return(
+       <Row > 
+       <Col >{character.name}</Col>
+       <Col ><img src = {character.image}></img></Col>
+       <Col >{character.bending}</Col>
+       <Col >{character.age}</Col>
+       
+     </Row>
+       )
       })
-      }    </Col>
+      } 
+   </Container>
+    // <Wrapper>
+    //   <Title>Employee Directory</Title>
+    //   <Col><Header
+    //   handleClick= {this.handleClick}>
+
+    //   </Header>
+    //   {avatar.map((character)=>{
+    //    return <Player 
+    //     name={character.name}
+    //     image={character.image}
+    //     bending={character.bending}
+    //     age = {character.age}
+    //   />
+    //   })
+    //   }    </Col>
         
-    </Wrapper>
+    // </Wrapper>
   );
 }
 }
