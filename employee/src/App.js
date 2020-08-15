@@ -71,10 +71,10 @@ class App extends React.Component {
     <ListGroup>
     <ListGroup.Item>
     <Row > 
-       <Col >Name</Col>
-       <Col >Image</Col>
-       <Col >Bending</Col>
-       <Col >Age</Col>
+       <Col><button>Name</button></Col>
+       <Col ><button>Image</button></Col>
+       <Col ><button>Bending</button></Col>
+       <Col ><button>Age</button></Col>
        
      </Row>
       </ListGroup.Item>
