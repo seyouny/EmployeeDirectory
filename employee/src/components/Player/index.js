@@ -12,6 +12,7 @@ function characters({name,image,bending,age}) {
       <div className = "col">{age}</div>
 
     </div>
+    
 
   );
 }

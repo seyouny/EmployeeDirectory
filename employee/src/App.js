@@ -64,7 +64,11 @@ class App extends React.Component {
   render()
 {
     return (
+  // <Wrapper>
   <Container>
+    {/* <h2>Employee Directory</h2> */}
+    <Title>Employee Directory</Title>
+
   {avatar.map((character)=>{
        return(
        <Row > 
@@ -78,6 +82,7 @@ class App extends React.Component {
       })
       } 
    </Container>
+  //  </Wrapper>
     // <Wrapper>
     //   <Title>Employee Directory</Title>
     //   <Col><Header
